@@ -7,7 +7,7 @@
                     while($row = mysql_fetch_array($q)){
                         $nursery_id = $row['id'];
                         $nursery_name = $row['name'];
-                        echo"<option value = '{$nursery_id}'>{$nursery_name}</option>";
+                        echo"<option value = '{$nursery_id}'>{$nursery_name}</option>"; 
                     }
                 ?>
             </select>

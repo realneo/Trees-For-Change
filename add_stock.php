@@ -3,7 +3,7 @@
 <?php include_once 'includes/db_conn.php';?>
 
 <div class='span9'>
-    <h4>Add Stock</h4>
+    <h4>Add Stock</h4> 
     <?php
         if ($_SESSION['alert'] == true){
             echo $_SESSION['alert'];

@@ -3,7 +3,7 @@
             <p><small>Select Supplier</small></p>
             <select name="supplier">
                 <?php
-                    $q = mysql_query("SELECT * FROM `supplier`");
+                    $q = mysql_query("SELECT * FROM `supplier`"); 
                     while($row = mysql_fetch_array($q)){
                         $supplier_id = $row['id'];
                         $supplier_name = $row['name'];
