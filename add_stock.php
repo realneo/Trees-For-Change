@@ -10,20 +10,47 @@
         }else{
             // Do nothin
         }
+    ?>
+    
+    <?php
+        // Clear Selection
+        if($_GET['clear'] == true){
+            $_SESSION['supplier_id'] = false;
+            $_SESSION['nursery_id'] = false;  
+        }
+        // Setting Sessions
+        if($_SESSION['supplier_id'] == false){
+           $_SESSION['supplier_id'] = $_GET['supplier'];
+           $supplier_id = $_SESSION['supplier_id'];
+        }
+        if ($_SESSION['nursery_id'] == false){
+            $_SESSION['nursery_id'] = $_GET['nursery'];
+            $nursery_id = $_SESSION['nursery_id'];
+        }
         
-     // Select Supplier Form
-     if($_GET['supplier'] == true){
-         include_once 'includes/select_nursery_form.php';
-     }else{
-         include_once 'includes/select_supplier_form.php';
-     }
-     if($_GET['nursery'] == true){
-         // Do nothing
-     }else{
-         include_once 'includes/select_supplier_form.php';
-     }   
-     
-     
+        // Getting The Names from the Database
+        $q = mysql_query("SELECT * FROM `supplier` WHERE `id` = '$supplier_id'");
+        while($row = mysql_fetch_array($q)){
+            $supplier_name = $row['name'];
+            $_SESSION['supplier_name'] = $supplier_name;
+        }
+        $q = mysql_query("SELECT * FROM `nursery` WHERE `id` = '$nursery_id'");
+        while($row = mysql_fetch_array($q)){
+            $nursery_name = $row['name'];
+            $_SESSION['nursery_name'] = $nursery_name;
+        }
+        
+        if($_SESSION['supplier_id'] == true AND $_SESSION['nursery_id'] == true){
+            include_once 'includes/selected_nursery_supplier.php';
+        }else if($_SESSION['supplier_id'] == true){
+            include_once 'includes/select_nursery_form.php';
+        }else{
+            include_once 'includes/select_supplier_form.php';
+        }
+        
+        
+
+        
     ?>
    
     

@@ -5,9 +5,9 @@
                 <?php
                     $q = mysql_query("SELECT * FROM `nursery`");
                     while($row = mysql_fetch_array($q)){
-                        $supplier_id = $row['id'];
-                        $supplier_name = $row['name'];
-                        echo"<option value = '{$supplier_id}'>{$supplier_name}</option>";
+                        $nursery_id = $row['id'];
+                        $nursery_name = $row['name'];
+                        echo"<option value = '{$nursery_id}'>{$nursery_name}</option>";
                     }
                 ?>
             </select>
