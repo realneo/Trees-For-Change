@@ -42,6 +42,7 @@
         
         if($_SESSION['supplier_id'] == true AND $_SESSION['nursery_id'] == true){
             include_once 'includes/selected_nursery_supplier.php';
+            include_once 'includes/add_stock_form.php';
         }else if($_SESSION['supplier_id'] == true){
             include_once 'includes/select_nursery_form.php';
         }else{
@@ -49,7 +50,6 @@
         }
         
         
-
         
     ?>
    
