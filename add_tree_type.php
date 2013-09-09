@@ -26,6 +26,7 @@
         <tr>
             <th>#</th>
             <th>Tree Name</th>
+            <th>Quantity</th>
             <td>Action</th>
         </tr>
         
@@ -41,6 +42,7 @@
                     <tr>
                         <td>{$num}</td>
                         <td>{$row['name']}</td>
+                        <td>{$row['quantity']}</td>
                         <td><button class='btn btn-danger btn-mini'>Delete</button></td>
                     </tr>
                     ";
