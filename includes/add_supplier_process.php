@@ -19,7 +19,7 @@
     }else{
 
         $q = "INSERT INTO `supplier` (`id`, `date`, `name`, `city`, `country`, `telephone`, `mobile`, `email`) 
-                            VALUES (NULL, 'CURDATE()', '$name', '$city', '$country', '$telephone', '$mobile', '$email');";
+                            VALUES (NULL, CURDATE(), '$name', '$city', '$country', '$telephone', '$mobile', '$email');";
         if(mysql_query($q) == true){
             $_SESSION['alert'] = "<div class='alert alert-success'>Supplier {$name} was successfully added.</div>";
             header("Location: ../add_supplier.php");
