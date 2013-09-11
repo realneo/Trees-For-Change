@@ -12,6 +12,7 @@
         <li><a href="add_nursery.php">Add Nursery</a></li>
         <li><a href="add_supplier.php">Add Supplier</a></li>
         <li><a href="add_donor.php">Add Donor</a></li>
+        <li><a href="add_dead.php">Add Dead Trees</a></li>
         <li class="nav-header">VIEW DATA</li>
         <li><a href="view_tree_type.php">Tree Types</a></li>
         <li><a href="view_nursery.php">Nurseries</a></li>
