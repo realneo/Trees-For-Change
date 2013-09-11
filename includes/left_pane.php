@@ -19,6 +19,7 @@
         <li><a href="view_supplier.php">Suppliers</a></li>
         <li><a href="view_donor.php">Donors</a></li>
         <li class="nav-header">REPORTS</li>
+        <li><a href="trees_report.php">Trees Report</a></li>
         <li><a href="#">Overall Report</a></li>
         <li><a href="#">Pending Report</a></li>
         <li><a href="#">Stock Report</a></li>
