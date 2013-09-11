@@ -14,6 +14,7 @@
         $total_trees = $row['quantity'];
         $not_assigned_trees = $row['not_assigned_trees'];
         $sold_id = $row['id'];
+        $plaque_name_id = $row['plaque_name_id'];
     }
     
     // Getting the total quantity of the tree_type selected
@@ -48,6 +49,11 @@
        
        for ($x = 1 ; $x<=$quantity ; $x++){
            $query = mysql_query("INSERT INTO `serial_number` (`tree_type_id`, `sold_id`) VALUES ('$tree_type_id', '$sold_id')");
+           // Update the `sold_tree` table
+           $serial_number_id = mysql_insert_id();
+            mysql_query("INSERT INTO `sold_tree` (`sold_id`, `tree_type_id`, `plaque_name_id`, `serial_number_id`) 
+                                    VALUES ('$sold_id', '$tree_type_id', '$plaque_name_id', '$serial_number_id')");
+           
        }
        
        // Update the `sold` Table if all the trees are assigned
@@ -63,6 +69,7 @@
             }
         }
        
+        
        
       $_SESSION['alert'] = "<div class='alert alert-success'>Successfully Assigned {$quantity} trees.</div>";
       
