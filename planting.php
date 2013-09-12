@@ -11,6 +11,7 @@
             // Do nothin
         }
     ?>
+    <form name='plan_process_form' method='get' action='includes/plant_process.php?idincludes/plant_process.php'>
     <table class="table table-striped table-hover">
         <tr>
             <th>#</th>
@@ -18,6 +19,7 @@
             <th>Serial No.</th>
             <th>Plaque Name</th>
             <th>Quantity</th>
+            <th>GPS Location</th>
             <td>Action</th>
         </tr>
         
@@ -49,12 +51,17 @@
                         <td>{$serial_number_id}</td>
                         <td>{$plaque_name}</td>
                         <td>{$quantity}</td>
-                        <td><a href='includes/plant_process.php?id={$sold_id}' class='btn btn-mini btn-success'>Planted</a></td>
+                        <td>
+                            <input type='text' name='location' placeholder='6 45 52 S, 39 14 50 E' class='span2'/>
+                            <input type='hidden' name='id' value='{$sold_id}' />
+                        </td>
+                        <td><button class='btn btn-mini btn-success' type='submit'>Planted</button></td>
                     </tr>
                     ";
             }
         ?>
     </table>
+        </form>
 </div><!-- span9 -->
 
 <?php include_once 'includes/footer.php';?>
