@@ -14,20 +14,17 @@
     <form name='plan_process_form' method='get' action='includes/plant_process.php?idincludes/plant_process.php'>
     <table class="table table-striped table-hover">
         <tr>
-            <th>#</th>
-            <th>Date</th>
             <th>Serial No.</th>
             <th>Plaque Name</th>
-            <th>Quantity</th>
-            <th>GPS Location</th>
+            <th>Qty</th>
+            <th>Deg/Min/Sec</th>
+            <th>Deg/Min/Sec</th>
             <td>Action</th>
         </tr>
         
         <?php
             $result = mysql_query("SELECT * FROM `sold` WHERE `assigned` = 1 AND `planted` = 0");
-            $num = 0;
             while($row = mysql_fetch_array($result)){
-                $num++;
                 $plaque_name_id = $row['plaque_name_id'];
                 $quantity = $row['quantity'];
                 $date = $row['date'];
@@ -46,15 +43,14 @@
                 $serial_number_id = "TFC".str_pad($serial_id, 6, '0', STR_PAD_LEFT); 
                 echo "
                     <tr>
-                        <td>{$num}</td>
-                        <td>{$date}</td>
                         <td>{$serial_number_id}</td>
                         <td>{$plaque_name}</td>
                         <td>{$quantity}</td>
                         <td>
-                            <input type='text' name='location' placeholder='6 45 52 S, 39 14 50 E' class='span2'/>
+                            <input type='text' name='longitude' placeholder='Longitude' class='span2'/>
                             <input type='hidden' name='id' value='{$sold_id}' />
                         </td>
+                        <td><input type='text' name='latitude' placeholder='Latitude' class='span2'/></td>
                         <td><button class='btn btn-mini btn-success' type='submit'>Planted</button></td>
                     </tr>
                     ";
