@@ -14,7 +14,17 @@
     <form name="add_nursery_form" method="post" action="includes/add_nursery_process.php" class="form-inline">
         <div class="well well-small">
             <small>Nursery Name:</small> <input type="text" class="input-small span2" placeholder="Name" name="name">
-            <small>Location:</small> <input type="text" class="input-small span3" placeholder="Location" name="location">
+            <small>Location:</small>
+            <select name='location'>
+                <?php
+                    $result = mysql_query("SELECT * FROM `location`");
+                    while($row = mysql_fetch_array($result)){
+                        $location_id = $row['id'];
+                        $location_name = $row['name'];
+                        echo "<option value='$location_id'>{$location_name}</option>";
+                    }
+                ?>  
+            </select>
             <button type="submit" class="btn"><i class='icon-plus-sign'></i> Add Nursery</button>
         </div>
     </form>
