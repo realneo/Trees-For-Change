@@ -46,12 +46,22 @@
             while($row = mysql_fetch_array($q)){
                 $id = $row['id']; 
                 $num++;
+                $result = mysql_query("SELECT * FROM `location`");
+                
                 echo"
                     <input type='hidden' name='id' value='{$id}' />
                     <tr>
                         <td>{$num}</td>
                         <td>{$row['name']}</td>
-                        <td>{$row['location']}</td>
+                        <td>
+                            <select name='location'>";
+                            while($rows = mysql_fetch_array($result)){
+                                $location_id = $rows['id'];
+                                $location_name = $rows['name'];
+                                echo "<option value='{$location_id}'>{$location_name}</option>";
+                            }    
+                echo"       </select>
+                        </td>
                         <td><button class='btn btn-danger btn-mini'><i class='icon-trash icon-white'></i> Delete</button></td>
                     </tr>
                     ";
