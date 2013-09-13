@@ -7,6 +7,7 @@
         <li><a href="assigning.php">Pending Assigning</a></li>
         <li><a href="planting.php">Pending Planting</a></li>
         <li class="nav-header">ADD DATA</li>
+        <li><a href="add_location.php">Add Location</a></li>
         <li><a href="add_stock.php">Add Stock</a></li>
         <li><a href="add_tree_type.php">Add Tree Type</a></li>
         <li><a href="add_nursery.php">Add Nursery</a></li>
