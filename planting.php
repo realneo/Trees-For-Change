@@ -59,7 +59,7 @@
                 echo "< /select></td>";
                 echo "
                     <input type='hidden' name='id' value='{$sold_id}' />
-                    <td><button class='btn btn-mini btn-success' type='submit'>Planted</button></td>
+                    <td><button class='btn btn-mini btn-success' type='submit'><i class='icon-check'></i> Planted</button></td>
                 </tr>";
             }
         ?>

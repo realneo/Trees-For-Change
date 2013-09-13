@@ -26,7 +26,7 @@
             <br />
             <small>Mobile:</small> <input type="text" class="input-small span2" placeholder="+255 700 123456" name="mobile">
             
-            <button type="submit" class="btn">Add Donor</button>
+            <button type="submit" class="btn"><i class='icon-plus-sign'></i> Add Donor</button>
         </div>
     </form>
     

@@ -16,7 +16,7 @@
             <p><small>Add a New Tree Type</small></p>
             <div class="input-append">
                 <input class="span5" id="name" name="name" placeholder="Mango" type="text">
-                <button class="btn" type="submit">Add Tree Type</button>
+                <button class="btn" type="submit"><i class='icon-plus-sign'></i> Add Tree Type</button>
             </div>
         </div>
     </form>

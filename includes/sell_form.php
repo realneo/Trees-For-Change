@@ -18,6 +18,6 @@
             <p><small>Quantity of Trees</small></p>
             <input type='text' name='quantity' value='' placeholder ='12345' class='span1' />
             <br />
-            <button type="submit" class="btn">Sell</button>
+            <button type="submit" class="btn"><i class='icon-plus-sign'></i> Sell</button>
         </div>
     </form>

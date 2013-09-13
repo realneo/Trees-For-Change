@@ -18,7 +18,7 @@
             <small>Latitude:</small> <input type='text' name='latitude' placeholder='39 14 50 (Latitude)' class='span2'/>
             <br />
             <br />
-            <button type="submit" class="btn">Add Location</button>
+            <button type="submit" class="btn"><i class='icon-plus-sign'></i> Add Location</button>
         </div>
     </form>
     

@@ -14,6 +14,6 @@
                 ?>
             <input type='text' name='quantity' value='' placeholder ='12345' class='span1' />
             <br />
-            <button type="submit" class="btn">Add Stock</button>
+            <button type="submit" class="btn"><i class='icon-plus-sign'></i> Add Stock</button>
         </div>
     </form>

@@ -13,6 +13,6 @@
             </select>
             <br />
             
-            <button type="submit" class="btn">Select Supplier</button>
+            <button type="submit" class="btn"><i class='icon-plus-sign'></i> Select Supplier</button>
         </div>
     </form>

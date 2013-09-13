@@ -36,6 +36,6 @@
 
             <input type='hidden' name='assign_id' value='<?php echo $assign_id ?>' />
             
-            <button class='btn btn-info' type='submit'>Assign</button>
+            <button class='btn btn-info' type='submit'><i class='icon-plus-sign'></i> Assign</button>
         </form>
     </div>

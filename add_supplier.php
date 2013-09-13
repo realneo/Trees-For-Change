@@ -25,7 +25,7 @@
             <small>Telephone:</small> <input type="text" class="input-small span2" placeholder="+255 22 2200099" name="telephone">
             <small>Mobile:</small> <input type="text" class="input-small span2" placeholder="+255 700 123456" name="mobile">
             
-            <button type="submit" class="btn">Add Supplier</button>
+            <button type="submit" class="btn"><i class='icon-plus-sign'></i> Add Supplier</button>
         </div>
     </form>
     

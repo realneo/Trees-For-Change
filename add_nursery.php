@@ -15,7 +15,7 @@
         <div class="well well-small">
             <small>Nursery Name:</small> <input type="text" class="input-small span2" placeholder="Name" name="name">
             <small>Location:</small> <input type="text" class="input-small span3" placeholder="Location" name="location">
-            <button type="submit" class="btn">Add Nursery</button>
+            <button type="submit" class="btn"><i class='icon-plus-sign'></i> Add Nursery</button>
         </div>
     </form>
     

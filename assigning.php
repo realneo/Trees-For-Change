@@ -41,7 +41,7 @@
                         <td>{$date}</td>
                         <td>{$plaque_name}</td>
                         <td>{$quantity}</td>
-                        <td><a href='assign.php?id={$sold_id}' class='btn btn-mini btn-info'>Assign</a></td>
+                        <td><a href='assign.php?id={$sold_id}' class='btn btn-mini btn-info'><i class='icon-plus-sign'></i> Assign</a></td>
                     </tr>
                     ";
             }
