@@ -4,7 +4,7 @@
     
     // Getting Data from the Form
     $name = $_POST['name'];
-    $location = $_POST['location'];
+    $location_id = $_POST['location'];
     
     
     // Checking if the Tree is already in the Database
@@ -14,7 +14,7 @@
         header("Location: ../add_nursery.php");
     }else{
 
-        $q = "INSERT INTO `nursery` (`id` ,`date`, `name` ,`location`) VALUES (NULL ,CURDATE() ,'$name', '$location')";
+        $q = "INSERT INTO `nursery` (`id` ,`date`, `name` ,`location_id`) VALUES (NULL ,CURDATE() ,'$name', '$location_id')";
         if(mysql_query($q) == true){
             $_SESSION['alert'] = "<div class='alert alert-success'>Nursery {$name} was successfully added.</div>";
             header("Location: ../add_nursery.php");
