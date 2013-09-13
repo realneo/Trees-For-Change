@@ -57,7 +57,7 @@
                     echo "<option value={$location_id}>{$location_name}</option>";
                 }
                 echo "< /select></td>";
-                echo "           }
+                echo "
                     <input type='hidden' name='id' value='{$sold_id}' />
                     <td><button class='btn btn-mini btn-success' type='submit'>Planted</button></td>
                 </tr>";
