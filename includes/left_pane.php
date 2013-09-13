@@ -1,24 +1,25 @@
 <div class='span3'>    
     <ul class="nav nav-list green_hover">
-        <li class="active"><a href="#">Dashboard</a></li>
+        <li class="active"><a href="#"><i class="icon-home"></i> Dashboard</a></li>
         <li class="nav-header">SELL TREES</li>
-        <li><a href="sell.php">Sell Trees</a></li>
+        <li><a href="sell.php"><i class="icon-check"></i> Sell Trees</a></li>
         <li class="nav-header">ACTION</li>
-        <li><a href="assigning.php">Pending Assigning</a></li>
-        <li><a href="planting.php">Pending Planting</a></li>
+        <li><a href="assigning.php"><i class="icon-th-large"></i> Pending Assigning</a></li>
+        <li><a href="planting.php"><i class="icon-th-large"></i> Pending Planting</a></li>
         <li class="nav-header">ADD DATA</li>
-        <li><a href="add_location.php">Add Location</a></li>
-        <li><a href="add_stock.php">Add Stock</a></li>
-        <li><a href="add_tree_type.php">Add Tree Type</a></li>
-        <li><a href="add_nursery.php">Add Nursery</a></li>
-        <li><a href="add_supplier.php">Add Supplier</a></li>
-        <li><a href="add_donor.php">Add Donor</a></li>
-        <li><a href="add_dead.php">Add Dead Trees</a></li>
+        <li><a href="add_location.php"><i class="icon-plus-sign"></i> Add Location</a></li>
+        <li><a href="add_stock.php"><i class="icon-plus-sign"></i> Add Stock</a></li>
+        <li><a href="add_tree_type.php"><i class="icon-plus-sign"></i> Add Tree Type</a></li>
+        <li><a href="add_nursery.php"><i class="icon-plus-sign"></i> Add Nursery</a></li>
+        <li><a href="add_supplier.php"><i class="icon-plus-sign"></i> Add Supplier</a></li>
+        <li><a href="add_donor.php"><i class="icon-plus-sign"></i> Add Donor</a></li>
+        <li><a href="add_dead.php"><i class="icon-plus-sign"></i> Add Dead Trees</a></li>
         <li class="nav-header">VIEW DATA</li>
-        <li><a href="view_tree_type.php">Tree Types</a></li>
-        <li><a href="view_nursery.php">Nurseries</a></li>
-        <li><a href="view_supplier.php">Suppliers</a></li>
-        <li><a href="view_donor.php">Donors</a></li>
+        <li><a href="view_location.php"><i class="icon-list"></i> Location</a></li>
+        <li><a href="view_tree_type.php"><i class="icon-list"></i> Tree Types</a></li>
+        <li><a href="view_nursery.php"><i class="icon-list"></i> Nurseries</a></li>
+        <li><a href="view_supplier.php"><i class="icon-list"></i> Suppliers</a></li>
+        <li><a href="view_donor.php"><i class="icon-list"></i> Donors</a></li>
         <li class="nav-header">REPORTS</li>
         <li><a href="trees_report.php">Trees Report</a></li>
         <li><a href="#">Overall Report</a></li>
