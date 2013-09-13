@@ -17,8 +17,7 @@
             <th>Serial No.</th>
             <th>Plaque Name</th>
             <th>Qty</th>
-            <th>Deg/Min/Sec</th>
-            <th>Deg/Min/Sec</th>
+            <th>Location Name</th>
             <td>Action</th>
         </tr>
         
@@ -41,19 +40,27 @@
                 }
                 
                 $serial_number_id = "TFC".str_pad($serial_id, 6, '0', STR_PAD_LEFT); 
+                
+                
                 echo "
                     <tr>
                         <td>{$serial_number_id}</td>
                         <td>{$plaque_name}</td>
                         <td>{$quantity}</td>
                         <td>
-                            <input type='text' name='longitude' placeholder='Longitude' class='span2'/>
-                            <input type='hidden' name='id' value='{$sold_id}' />
-                        </td>
-                        <td><input type='text' name='latitude' placeholder='Latitude' class='span2'/></td>
-                        <td><button class='btn btn-mini btn-success' type='submit'>Planted</button></td>
-                    </tr>
-                    ";
+                     ";
+                echo "<select name='location'>"; 
+                $result5 = mysql_query("SELECT * FROM `location`");
+                while($rowsss = mysql_fetch_array($result5)){
+                    $location_id = $rowsss['id'];
+                    $location_name = $rowsss['name'];
+                    echo "<option value={$location_id}>{$location_name}</option>";
+                }
+                echo "< /select></td>";
+                echo "           }
+                    <input type='hidden' name='id' value='{$sold_id}' />
+                    <td><button class='btn btn-mini btn-success' type='submit'>Planted</button></td>
+                </tr>";
             }
         ?>
     </table>
