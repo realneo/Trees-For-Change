@@ -38,7 +38,7 @@
                         <td>{$row['email']}</td>
                         <td>{$row['telephone']}</td>
                         <td>{$row['mobile']}</td>
-                        <td><button class='btn btn-danger btn-mini'>Delete</button></td>
+                        <td><button class='btn btn-danger btn-mini'><i class='icon-trash icon-white'></i> Delete</button></td>
                     </tr>
                     ";
             }
