@@ -13,6 +13,8 @@
         $query = mysql_query("UPDATE `sold` SET `planted` = '1', `location_id` = '$location_id' WHERE `id` ='$sold_id'");
 
         if ($query == true){
+            // Insert record in the planted table
+            mysql_query("INSERT INTO `planted` (`id`, `date`, `sold_id`) VALUES (NULL, CURDATE(), '$sold_id')");
             $_SESSION['alert'] = "<div class='alert alert-success'>Successfully Planted these Trees.</div>";
             header("Location: ../planting.php"); 
         }else{
