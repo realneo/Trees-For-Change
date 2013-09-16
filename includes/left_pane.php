@@ -21,13 +21,6 @@
         <li><a href="view_supplier.php"><i class="icon-list"></i> Suppliers</a></li>
         <li><a href="view_donor.php"><i class="icon-list"></i> Donors</a></li>
         <li class="nav-header">REPORTS</li>
-        <li><a href="trees_report.php">Trees Report</a></li>
-        <li><a href="#">Overall Report</a></li>
-        <li><a href="#">Pending Report</a></li>
-        <li><a href="#">Stock Report</a></li>
-        <li><a href="#">Tree Types Report</a></li>
-        <li><a href="#">Nurseries Report</a></li>
-        <li><a href="#">Suppliers Report</a></li>
-
+        <li><a href="trees_report.php"><i class="icon-file"></i> Trees Report</a></li>
     </ul>
 </div><!-- left_pane -->
