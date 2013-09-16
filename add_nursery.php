@@ -40,7 +40,7 @@
         </tr>
         
         <?php
-            $q = mysql_query("SELECT * FROM `nursery` ORDER BY `id` DESC LIMIT 8");
+            $q = mysql_query("SELECT * FROM `nursery` ORDER BY `name` ASC LIMIT 8");
             $num = 0;
             
             while($row = mysql_fetch_array($q)){
