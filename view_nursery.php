@@ -21,18 +21,23 @@
         </tr>
         
         <?php
-            $q = mysql_query("SELECT * FROM `nursery`");
+            $q = mysql_query("SELECT * FROM `nursery` ORDER BY `name` ASC");
             $num = 0;
             
             while($row = mysql_fetch_array($q)){
                 $id = $row['id']; 
                 $num++;
+                $location_id = $row['location_id'];
+                $qq = mysql_query("SELECT * FROM `location` WHERE `id` = '$location_id'");
+                while($rows = mysql_fetch_array($qq)){
+                    $location_name = $rows['name'];
+                }
                 echo"
                     <input type='hidden' name='id' value='{$id}' />
                     <tr>
                         <td>{$num}</td>
                         <td>{$row['name']}</td>
-                        <td>{$row['location']}</td>
+                        <td>{$location_name}</td>
                         <td><button class='btn btn-danger btn-mini'><i class='icon-trash icon-white'></i> Delete</button></td>
                     </tr>
                     ";
