@@ -1,6 +1,6 @@
 <div class='span3'>    
     <ul class="nav nav-list green_hover">
-        <li class="active"><a href="#"><i class="icon-home"></i> Dashboard</a></li>
+        <li class="active"><a href="home.php"><i class="icon-home"></i> Dashboard</a></li>
         <li class="nav-header">SELL TREES</li>
         <li><a href="sell.php"><i class="icon-check"></i> Sell Trees</a></li>
         <li class="nav-header">ACTION</li>
