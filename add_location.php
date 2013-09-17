@@ -11,7 +11,7 @@
             // Do nothin
         }
     ?>
-    <form name="add_nursery_form" method="post" action="includes/add_nursery_process.php" class="form-inline">
+    <form name="add_nursery_form" method="post" action="includes/add_location_process.php" class="form-inline">
         <div class="well well-small">
             <small>Location Name:</small> <input type='text' name='name' placeholder='Kisemvule' class='span2'/>
             <small>Longitude:</small> <input type='text' name='longitude' placeholder='6 45 52 (Longitude)' class='span2'/>
