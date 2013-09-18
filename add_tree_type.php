@@ -13,11 +13,42 @@
     ?>
     <form name="add_tree_type_form" method="post" action="includes/add_tree_type_process.php">
         <div class="well well-small">
-            <p><small>Add a New Tree Type</small></p>
-            <div class="input-append">
-                <input class="span5" id="name" name="name" placeholder="Mango" type="text">
-                <button class="btn" type="submit"><i class='icon-plus-sign'></i> Add Tree Type</button>
-            </div>
+            <table>
+                <tr>
+                    <td>
+                        <p><small>Group</small></p>
+                        <select name="tree_group">
+                            <option value="Indigenous">Indigenous</option>
+                            <option value="Exotic">Exotic</option>
+                        </select>
+                    </td>
+                    <td>
+                        <p><small>Tree Category</small></p>
+                        <select name="tree_category">
+                            <option value="Fruits">Fruits</option>
+                            <option value="Timber">Timber</option>
+                            <option value="Medicine">Medicine</option>
+                            <option value="Deco">Deco</option>
+                            <option value="Flowers">Flowers</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><small>English Name</small></p>
+                        <input class="span3" id="name" name="name" placeholder="Mango" type="text">
+                    </td>
+                    <td>
+                        <p><small>Botanic Name</small></p>
+                        <input class="span3" id="name" name="botanic_name" placeholder="Mangoes" type="text">
+                    </td>
+                    <td>
+                        <p><small>Local Name</small></p>
+                        <input class="span3" id="name" name="local_name" placeholder="Embe" type="text">
+                    </td>
+                </tr>
+            </table>
+            <button class="btn" type="submit"><i class='icon-plus-sign'></i> Add Tree Type</button>
         </div>
     </form>
     <p>Recent Added Tree Types</p>
@@ -25,8 +56,11 @@
     <table class="table table-striped table-hover">
         <tr>
             <th>#</th>
-            <th>Tree Name</th>
-            <th>Quantity</th>
+            <th>Group</th>
+            <th>Category</th>
+            <th>English Name</th>
+            <th>Local Name</th>
+            <th>Botanic Name</th>
             <td>Action</th>
         </tr>
         
@@ -41,8 +75,11 @@
                     <input type='hidden' name='id' value='{$id}' />
                     <tr>
                         <td>{$num}</td>
+                        <td>{$row['tree_group']}</td>
+                        <td>{$row['tree_category']}</td>
                         <td>{$row['name']}</td>
-                        <td>{$row['quantity']}</td>
+                        <td>{$row['local_name']}</td>
+                        <td>{$row['botanic_name']}</td>
                         <td><button class='btn btn-danger btn-mini'><i class='icon-trash icon-white'></i> Delete</button></td>
                     </tr>
                     ";
