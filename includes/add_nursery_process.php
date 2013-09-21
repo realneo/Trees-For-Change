@@ -6,7 +6,6 @@
     $name = $_POST['name'];
     $location_id = $_POST['location'];
     
-    
     // Checking if the Tree is already in the Database
     $q = mysql_query("SELECT * FROM `nursery` WHERE `name` = '$name'");
     if(mysql_num_rows($q) >= 1){
@@ -23,5 +22,4 @@
             header("Location: ../add_nursery.php");
         }
     }
-
 ?>
