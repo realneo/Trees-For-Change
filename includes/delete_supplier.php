@@ -5,13 +5,16 @@
     // Getting Data from the Form
     $id = $_GET['id'];
     
-    $q = "DELETE FROM `supplier` WHERE `id` = '$id'";
+    // Cheking to see if location is associated with any transaction
+    $qq = mysql_query("SELECT * FROM `store` WHERE `supplier_id` = '$id'");
     
-    if(mysql_query($q) == true){
-        $_SESSION['alert'] = "<div class='alert alert-success'>Supplier was successfully Deleted</div>";
+    if(mysql_num_rows($qq) >= 1){
+        $_SESSION['alert'] = "<div class='alert alert-error'>There was an error deleting this Supplier</div>";
         header("Location: ../add_supplier.php");
     }else{
-        $_SESSION['alert'] = "<div class='alert alert-error'>There was an error deleting this Supplier</div>";
+        
+        mysql_query("DELETE FROM `supplier` WHERE `id` = '$id'");
+        $_SESSION['alert'] = "<div class='alert alert-success'>Supplier was successfully Deleted</div>";
         header("Location: ../add_supplier.php");
     }
 
