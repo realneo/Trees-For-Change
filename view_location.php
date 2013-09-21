@@ -11,7 +11,6 @@
             // Do nothin
         }
     ?>
-    <form action="includes/delete_location.php" method="get" onsubmit="return confirm('Are you sure you want to Delete this Item?');">
     <table class="table table-striped table-hover">
         <tr>
             <th>#</th>
@@ -29,19 +28,20 @@
                 $id = $row['id']; 
                 $num++;
                 echo"
-                    <input type='hidden' name='id' value='{$id}' />
-                    <tr>
-                        <td>{$num}</td>
-                        <td>{$row['name']}</td>
-                        <td>{$row['longitude']}</td>
-                        <td>{$row['latitude']}</td>
-                        <td><button class='btn btn-danger btn-mini'><i class='icon-trash icon-white'></i> Delete</button></td>
-                    </tr>
+                    <form action='includes/delete_location.php' method='get' onsubmit='return confirm(deleteMsg);'>
+                        <input type='hidden' name='id' value='{$id}' />
+                        <tr>
+                            <td>{$num}</td>
+                            <td>{$row['name']}</td>
+                            <td>{$row['longitude']}</td>
+                            <td>{$row['latitude']}</td>
+                            <td><button class='btn btn-danger btn-mini'><i class='icon-trash icon-white'></i> Delete</button></td>
+                        </tr>
+                    </form>
                     ";
             }
         ?>
     </table>
-    </form>
 </div><!-- span9 -->
 
 <?php include_once 'includes/footer.php';?>

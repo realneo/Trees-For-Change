@@ -11,7 +11,6 @@
             // Do nothin
         }
     ?>
-    <form action="includes/delete_nursery.php" method="get" onsubmit="return confirm('Are you sure you want to Delete this Item?');">
     <table class="table table-striped table-hover">
         <tr>
             <th>#</th>
@@ -33,6 +32,7 @@
                     $location_name = $rows['name'];
                 }
                 echo"
+                    <form action='includes/delete_nursery.php' method='get' onsubmit='return confirm(deleteMsg);'>
                     <input type='hidden' name='id' value='{$id}' />
                     <tr>
                         <td>{$num}</td>
@@ -44,7 +44,6 @@
             }
         ?>
     </table>
-    </form>
 </div><!-- span9 -->
 
 <?php include_once 'includes/footer.php';?>
