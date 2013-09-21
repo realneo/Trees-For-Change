@@ -30,7 +30,7 @@
     </form>
     
     <p>Recent Added Nurseries</p>
-    <form action="includes/delete_nursery.php" method="get" onsubmit="return confirm('Are you sure you want to Delete this Item?');">
+
     <table class="table table-striped table-hover">
         <tr>
             <th>#</th>
@@ -50,24 +50,25 @@
                 $result = mysql_query("SELECT * FROM `location` WHERE `id` = '$location_id'");
                 
                 echo"
-                    <input type='hidden' name='id' value='{$id}' />
-                    <tr>
-                        <td>{$num}</td>
-                        <td>{$row['name']}</td>
-                        <td>";
-                            while($rows = mysql_fetch_array($result)){
-                                $location_id = $rows['id'];
-                                $location_name = $rows['name'];
-                                echo "{$location_name}";
-                            }
-                        echo "</td>
-                        <td><button class='btn btn-danger btn-mini'><i class='icon-trash icon-white'></i> Delete</button></td>
-                    </tr>
+                    <form action='includes/delete_nursery.php' method='get' onsubmit='return confirm(deleteMsg);'>
+                        <input type='hidden' name='id' value='{$id}' />
+                        <tr>
+                            <td>{$num}</td>
+                            <td>{$row['name']}</td>
+                            <td>";
+                                while($rows = mysql_fetch_array($result)){
+                                    $location_id = $rows['id'];
+                                    $location_name = $rows['name'];
+                                    echo "{$location_name}";
+                                }
+                            echo "</td>
+                            <td><button class='btn btn-danger btn-mini'><i class='icon-trash icon-white'></i> Delete</button></td>
+                        </tr>
+                    </form>
                     ";
             }
         ?>
     </table>
-    </form>
 </div><!-- span9 -->
 
 <?php include_once 'includes/footer.php';?>
