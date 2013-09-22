@@ -7,13 +7,15 @@
         <li><a href="assigning.php"><i class="icon-th-large"></i> Pending Assigning</a></li>
         <li><a href="planting.php"><i class="icon-th-large"></i> Pending Planting</a></li>
         <li class="nav-header">ADD DATA</li>
+        <li><a href="add_seeds.php"><i class="icon-plus-sign"></i> Add Seeds</a></li>
+        <li><a href="add_dead_seeds.php"><i class="icon-plus-sign"></i> Add Dead Seeds</a></li>
         <li><a href="add_location.php"><i class="icon-plus-sign"></i> Add Location</a></li>
         <li><a href="add_stock.php"><i class="icon-plus-sign"></i> Add Stock</a></li>
+        <li><a href="add_dead.php"><i class="icon-plus-sign"></i> Add Dead Trees</a></li>        
         <li><a href="add_tree_type.php"><i class="icon-plus-sign"></i> Add Tree Type</a></li>
         <li><a href="add_nursery.php"><i class="icon-plus-sign"></i> Add Nursery</a></li>
         <li><a href="add_supplier.php"><i class="icon-plus-sign"></i> Add Supplier</a></li>
         <li><a href="add_donor.php"><i class="icon-plus-sign"></i> Add Donor</a></li>
-        <li><a href="add_dead.php"><i class="icon-plus-sign"></i> Add Dead Trees</a></li>
         <li class="nav-header">VIEW DATA</li>
         <li><a href="view_location.php"><i class="icon-list"></i> Location</a></li>
         <li><a href="view_tree_type.php"><i class="icon-list"></i> Tree Types</a></li>
