@@ -3,7 +3,7 @@
 <?php include_once 'includes/db_conn.php';?>
 
 <div class='span9'>
-    <h4>Add Stock</h4> 
+    <h4>Add Sown Seeds</h4> 
     <?php
         if ($_SESSION['alert'] == true){
             echo $_SESSION['alert'];
@@ -13,46 +13,59 @@
     ?>
     
     <?php
-        // Clear Selection
-        if($_GET['clear'] == true){
-            $_SESSION['supplier_id'] = false;
-            $_SESSION['nursery_id'] = false;  
-        }
-        // Setting Sessions
-        if($_SESSION['supplier_id'] == false){
-           $_SESSION['supplier_id'] = $_GET['supplier'];
-           $supplier_id = $_SESSION['supplier_id'];
-        }
-        if ($_SESSION['nursery_id'] == false){
-            $_SESSION['nursery_id'] = $_GET['nursery'];
-            $nursery_id = $_SESSION['nursery_id'];
-        }
         
         // Getting The Names from the Database
-        $q = mysql_query("SELECT * FROM `supplier` WHERE `id` = '$supplier_id'");
+        $q = mysql_query("SELECT * FROM `seeds`");
         while($row = mysql_fetch_array($q)){
-            $supplier_name = $row['name'];
-            $_SESSION['supplier_name'] = $supplier_name;
+            $seed_id = $row['id'];
         }
-        $q = mysql_query("SELECT * FROM `nursery` WHERE `id` = '$nursery_id'");
-        while($row = mysql_fetch_array($q)){
-            $nursery_name = $row['name'];
-            $_SESSION['nursery_name'] = $nursery_name;
-        }
-        
-        if($_SESSION['supplier_id'] == true AND $_SESSION['nursery_id'] == true){
-            include_once 'includes/selected_nursery_supplier.php';
-            include_once 'includes/add_stock_form.php';
-        }else if($_SESSION['supplier_id'] == true){
-            include_once 'includes/select_nursery_form.php';
-        }else{
-            include_once 'includes/select_supplier_form.php';
-        }
-        
-        
-        
     ?>
-   
+    
+    <form name="add_stock_form" method="post" action="includes/add_stock_process.php">
+        <div class="well well-small">
+            <p><small>Add Sown Seeds</small></p>
+                <?php
+                    echo "<select name='store'>";
+                    $q = mysql_query("SELECT * FROM `store`");
+                    while($row = mysql_fetch_array($q)){
+                        $seed_id = $row['id'];
+                        $total_est_qty = $row['total_est_qty'];
+                        $tree_type_id = $row['tree_type_id'];
+                        
+                        $qq = mysql_query("SELECT * FROM `tree_type` WHERE `id` = '$tree_type_id'");
+                        while($rows = mysql_fetch_array($qq)){
+                            $tree_type_name = $rows['name'];
+                            $tree_type_id = $rows['id'];
+                        }
+                        $qq = mysql_query("SELECT * FROM `store` WHERE `tree_type_id` = '$tree_type_id'");
+                            while($rowss = mysql_fetch_array($qq)){
+                                $db_est_qty = $rowss['total_est_qty'];
+                            }
+                        echo"<option value = '{$seed_id}'>{$tree_type_name} - {$db_est_qty}</option>"; 
+                    }
+                    echo "</select>";
+                ?>
+            <input type='text' name='quantity' value='' placeholder ='12345' class='span1' />
+            <p><small>Pricked Month</small></p>
+            <select name="pricked_month">
+                <option value="january">January</option>
+                <option value="february">February</option>
+                <option value="march">March</option>
+                <option value="april">April</option>
+                <option value="may">May</option>
+                <option value="june">June</option>
+                <option value="july">July</option>
+                <option value="august">August</option>
+                <option value="september">September</option>
+                <option value="october">October</option>
+                <option value="november">November</option>
+                <option value="december">December</option>
+            </select>
+            <input type="hidden" name="tree_type_id" value="<?php echo $tree_type_id; ?>" />
+            <br />
+            <button type="submit" class="btn"><i class='icon-plus-sign'></i> Sown Seeds </button>
+        </div>
+    </form>
     
     
 </div><!-- span9 -->

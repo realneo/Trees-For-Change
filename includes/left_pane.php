@@ -9,8 +9,9 @@
         <li class="nav-header">ADD DATA</li>
         <li><a href="add_seeds.php"><i class="icon-plus-sign"></i> Add Seeds</a></li>
         <li><a href="add_dead_seeds.php"><i class="icon-plus-sign"></i> Add Dead Seeds</a></li>
+        <li><a href="add_stock.php"><i class="icon-plus-sign"></i> Sown Seeds </a></li>
+        <li><a href="add_pricked_trees.php"><i class="icon-plus-sign"></i> Pricked Trees </a></li>
         <li><a href="add_location.php"><i class="icon-plus-sign"></i> Add Location</a></li>
-        <li><a href="add_stock.php"><i class="icon-plus-sign"></i> Add Stock</a></li>
         <li><a href="add_dead.php"><i class="icon-plus-sign"></i> Add Dead Trees</a></li>        
         <li><a href="add_tree_type.php"><i class="icon-plus-sign"></i> Add Tree Type</a></li>
         <li><a href="add_nursery.php"><i class="icon-plus-sign"></i> Add Nursery</a></li>
